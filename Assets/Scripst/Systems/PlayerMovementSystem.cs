@@ -21,7 +21,6 @@ public class PlayerMovementSystem : ComponentSystem
             float3 movVectorAdd = transform.Forward * Axis.y * player.speed * deltaTime;
             physics.Linear += new float3(movVectorAdd.x,0, movVectorAdd.z);
             physics.Angular = new float3(0.0f, Axis.x * player.rotation * deltaTime, 0.0f);
-
         });
         
     }
